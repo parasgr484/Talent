@@ -1,0 +1,209 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Flights</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .background-image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+	  #text1{width:180px;
+	padding:8px 2px;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	border-bottom:#666666;}
+	#text{width:225px;
+    margin: 8px 0;
+	padding:10px 5px;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#text1{width:180px;
+    margin: 4px 0;
+	padding:8px 2px;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	border-bottom:#666666;}
+
+#text2{width:100px;
+    margin: 4px 0;
+	padding:6px 1px;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	border-bottom:#666666;}
+
+#fontw{ font-size:52px;
+		font-family:"Monotype Corsiva";
+		color:#F39;
+		}
+
+  </style>
+</head>
+<body class="background-image" style=" background-image: url('CivilA.jpg');">
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12" style="background-color:black; height:100px; padding-top:30px;" id="fontw" align="center" >Flight Booking System</div>
+   </div><br>
+<br>
+
+   <div style="border-radius:35px;background: rgba(230,205,205,.3);" class="container-fluid" align="center">
+
+    <div class="container-fluid">
+	<div class="row">
+    		<div class="col-sm-12 col-md-12 col-lg-12"><span style="font-family: 'Raleway', sans-serif; font-size:22px; color:black">Book Domestic and International Flight Tickets</span><br><br></div>
+	</div>
+    <div  class="container-fluid" align="left">
+<div class="btn-group btn-group-lg">
+    <button type="button" class="btn btn-primary">Domestic</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-primary">International</button>
+
+  </div>
+   <form name="Form" method="post" action="manage.php">
+    <div class="container-fluid">
+ 		<div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-2" ><input type="radio" name="one">ONE WAY</input></div>
+            <div class="col-sm-3 col-md-2 col-lg-1" ><input type="radio" name="one">ROUND TRIP</input></div>
+         
+         </div>
+  </div>
+ 
+    <div class="container-fluid">       
+    <div class="row">
+			<div class="col-sm-3 col-md-3 col-lg-3" >From<br><input type="text" id="text" name="fname" placeholder="Type Departure City"></input>&nbsp;</div>
+            <div class="col-sm-3 col-md-3 col-lg-2" >To<br><input type="text" id="text" name="fname1" placeholder="Type Destination City"></input>
+            </div>
+
+	</div>
+    </div>
+	
+  <div class="container-fluid">
+ 		<div class="row">
+  			<div class="col-sm-2 col-md-2 col-lg-3" >Date:<br><input name="date" id="text1"type="date" maxlength="2" size="1" placeholder="Select Date"></input>&nbsp;&nbsp;</div>
+            <div class="col-sm-2 col-md-2 col-lg-3" >ADLUT(1 2+ YRS)&nbsp;<br><input type="button" onclick="decrementValue()" value="-" />
+<input type="text" name="quantity" value="1" maxlength="2" max="10" disabled size="1" id="number" />
+<input type="button" onclick="incrementValue()" value="+" />
+</div>
+         	<div class="col-sm-2 col-md-2 col-lg-3" >CHILD(2-11 YRS)&nbsp;<br><input type="button" onclick="decrementValue1()" value="-" />
+<input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" disabled id="number1" />
+<input type="button" onclick="incrementValue1()" value="+" /></div>
+         	<div class="col-sm-2 col-md-2 col-lg-3" >INFANT(0-2 YRS)&nbsp;<br><input type="button" onclick="decrementValue2()" value="-" />
+<input type="text" name="quantity" maxlength="2" size="1"   value="1" max="10" disabled id="number2" />
+<input type="button" onclick="incrementValue2()" value="+" />
+         </div>
+  </div>
+  </div>
+   <div class="container-fluid">
+ 		<div class="row">
+ 
+            <div class="col-sm-6 col-md-3  col-lg-3" >CLASS:<br><select id="text1" title="Class">
+							<option selected="selected">Economy</option>
+							<option value="1">Premium Economy</option>
+							<option value="1">Bussiness</option>
+							</select>
+				</div>
+            <div class="col-sm-6 col-md-2 col-lg-2" >AIRLINE PREFRENCES:<BR><select id="text1" title="Airline">
+							
+							<option selected="selected" disabled="disabled">Select</option>
+							<option value="1">INDIGO</option>
+							<option value="1">AIR INDIA</option>
+							<option value="1"> JET AIRWAYS</option>
+							<option value="1">VISTARA</option>
+							<option value="1">SPICEJET</option>
+							<option value="1">GOAIR</option>
+							<option value="1">AIRASIA</option>
+							<option value="1">SAHARA</option>
+							</select>
+              </div>
+              </div>
+              </div>
+              
+               <div class="container-fluid">
+ 		<div class="row">
+ 				 <div class="col-sm-6  col-lg-2" >
+			 	<input type="submit" id="text1" value="SEARCH FLIGHTS" style="background-color:#C9F; border-radius:0px;" ></input>
+				</div> 
+                   
+    </form>
+    </div>
+</div>
+<script>
+ function incrementValue()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value<10){
+        value++;
+            document.getElementById('number').value = value;
+    }
+}
+function decrementValue()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value>1){
+        value--;
+            document.getElementById('number').value = value;
+    }
+
+}
+ function incrementValue1()
+{
+    var value = parseInt(document.getElementById('number1').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value<10){
+        value++;
+            document.getElementById('number1').value = value;
+    }
+}
+function decrementValue1()
+{
+    var value = parseInt(document.getElementById('number1').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value>1){
+        value--;
+            document.getElementById('number1').value = value;
+    }
+
+}
+ function incrementValue2()
+{
+    var value = parseInt(document.getElementById('number2').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value<10){
+        value++;
+            document.getElementById('number2').value = value;
+    }
+}
+function decrementValue2()
+{
+    var value = parseInt(document.getElementById('number2').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value>1){
+        value--;
+            document.getElementById('number2').value = value;
+    }
+
+}
+</script>
+
+</body>
+</html>
+
